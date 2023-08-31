@@ -10,7 +10,7 @@ from botRespond import getResponse
 ##Experimental Date Time
 from dateTime import getTime, getDate
 
-application = Flask(__name__)
+
 
 chatbotName = myBotName
 print("Bot Name set to: " + chatbotName)
@@ -23,6 +23,8 @@ try:
     file = open('BotLog.csv', 'r')
 except IOError:
     file = open('BotLog.csv', 'w')
+
+application = Flask(__name__)
 
 def tryGoogle(myQuery):
     myQuery = myQuery.replace("'", "%27")
